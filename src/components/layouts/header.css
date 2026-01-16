@@ -1,0 +1,99 @@
+header {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 24px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+header .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.nav-logo span {
+
+    font-weight: 800;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+
+/* Desktop nav */
+
+.desktop-nav {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    background-color: #1E2938;
+    transition: width 500ms linear;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    background-color: #1E2938;
+    transition: width 500ms linear;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    width: 50%;
+    transition: width 500ms linear;
+}
+
+@media screen and (min-width: 1024px) {
+    header .mobile-nav {
+        display: none;
+    }
+
+    header .desktop-nav {
+        display: flex;
+    }
+}

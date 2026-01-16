@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 6px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #F9FAFB;
+}
+
+p,
+ul li {
+  color: #4B5769;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.card-transition {
+  transition: transform 500ms linear;
+}
+
+.card-transition:hover {
+  transform: translateY(-5px);
+  transition: transform 500ms linear;
+}
+
+.icon-transition {
+  transition: transform 500ms linear;
+}
+
+.card-transition:hover .icon-transition {
+  transform: scale(1.1);
+  transition: transform 500ms linear;
+}
+
+.prevent-overflow {
+  overflow: hidden;
+}
