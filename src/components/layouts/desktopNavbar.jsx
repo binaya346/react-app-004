@@ -1,4 +1,6 @@
 import NavItem from "./navItem";
+import NavLogo from "./navLogo"
+import Button from "../reusable/button"
 
 const DesktopNavbar = () => {
     const navItems = [
@@ -6,26 +8,27 @@ const DesktopNavbar = () => {
         { label: "Products", path: "/products" },
         { label: "Projects", path: "/projects" },
         { label: "About", path: "/about" },
-        { label: "Contact", path: "/contact" },
+        { label: "Contact", path: "/contact" }
     ]
 
     return (
         <div className="desktop-nav">
-            <div className="nav-logo">
-                <span>A</span>
-                <div className="logo-text">AntByte labs</div>
-            </div>
+            <NavLogo />
 
             <nav>
                 <ul>
                     {navItems.map((item, index) => (
-                        <NavItem key={index} label={item.label} path={item.path} />
+                        <NavItem 
+                            key={index} 
+                            label={item.label} 
+                            path={item.path} 
+                        />
                     ))}
                 </ul>
             </nav>
 
             <div className="get-started">
-                <button className="btn btn-primary">Get Started</button>
+                <Button variant="primary">Get Started</Button>
             </div>
         </div>
     )

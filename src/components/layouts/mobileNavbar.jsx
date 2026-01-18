@@ -1,11 +1,9 @@
+import NavLogo from "./navLogo"
 
 const MobileNavbar = () => {
     return (
         <nav className="mobile-nav">
-            <div className="nav-logo">
-                <span>A</span>
-                <div className="logo-text">AntByte labs</div>
-            </div>
+            <NavLogo />
 
             <div className="hamburger">
                 <img src="images/hamburger-menu.png" alt="hamburger menu" height="auto" width="40px" />
