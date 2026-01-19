@@ -19,7 +19,6 @@ const DesktopNavbar = () => {
                 <ul>
                     {navItems.map((item, index) => (
                         <NavItem 
-                            key={index} 
                             label={item.label} 
                             path={item.path} 
                         />

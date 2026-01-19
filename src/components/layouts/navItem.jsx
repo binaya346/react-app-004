@@ -1,9 +1,9 @@
 
 const NavItem = (props) => {
-    const { key, label, path } = props;
+    const { label, path } = props;
     return (
         <li>
-            <a href={path} key={key}>{label}</a>
+            <a href={path} key={label}>{label}</a>
         </li>
     )
 }
