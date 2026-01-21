@@ -51,24 +51,23 @@ const Coffee = () => {
                                 </div>
                                 <div className="meta">
                                     <span>Ingredients: </span>
-                                    {coffee.ingredients &&
-                                        coffee?.ingredients.length > 0 && typeof coffee.ingredients != "string" &&
-                                        coffee.ingredients.map(
-                                            (ingredient, index) =>
-                                            (
-                                                <span key={index}>
-                                                    {ingredient}
-                                                </span>
+                                    <ul>
+                                        {coffee.ingredients &&
+                                            coffee?.ingredients.length > 0 && typeof coffee.ingredients != "string" &&
+                                            coffee.ingredients.map(
+                                                (ingredient, index) =>
+                                                (
+                                                    <li key={index}>{ingredient}</li>
+                                                )
                                             )
-                                        )
-                                    }
+                                        }
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     ))}
             </div>
         </>
-
     )
 }
 

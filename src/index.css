@@ -56,3 +56,20 @@ img {
 main {
   padding: 25px 40px;
 }
+
+.error-page {
+  padding: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.error-page .component-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.error-page a {
+  color: #2563EB;
+  text-decoration: none;
+  margin: 80px;
+}

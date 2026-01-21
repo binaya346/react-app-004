@@ -4,11 +4,9 @@ import Button from "../reusable/button"
 
 const DesktopNavbar = () => {
     const navItems = [
-        { label: "Services", path: "/services" },
-        { label: "Products", path: "/products" },
-        { label: "Projects", path: "/projects" },
-        { label: "About", path: "/about" },
-        { label: "Contact", path: "/contact" }
+        { label: "Home", path: "/" },
+        { label: "Wine", path: "/wine" },
+        { label: "Coffee", path: "/coffee" },
     ]
 
     return (
@@ -18,9 +16,9 @@ const DesktopNavbar = () => {
             <nav>
                 <ul>
                     {navItems.map((item, index) => (
-                        <NavItem 
-                            label={item.label} 
-                            path={item.path} 
+                        <NavItem
+                            label={item.label}
+                            path={item.path}
                         />
                     ))}
                 </ul>

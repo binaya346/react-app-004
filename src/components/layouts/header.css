@@ -88,6 +88,11 @@ nav ul li a:hover::after {
     transition: width 500ms linear;
 }
 
+nav ul li a.active::before,
+nav ul li a.active::after {
+    width: 50%;
+}
+
 @media screen and (min-width: 1024px) {
     header .mobile-nav {
         display: none;

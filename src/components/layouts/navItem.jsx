@@ -1,9 +1,14 @@
+import { NavLink } from "react-router-dom";
 
 const NavItem = (props) => {
     const { label, path } = props;
     return (
         <li>
-            <a href={path} key={label}>{label}</a>
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? "active" : ""
+                }
+                to={path} key={label}>{label}</NavLink>
         </li>
     )
 }
