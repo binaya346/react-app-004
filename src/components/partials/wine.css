@@ -53,6 +53,16 @@
     font-weight: bold;
 }
 
+.list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.list-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 50px;

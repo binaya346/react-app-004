@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./wine.css";
 
 const Wine = () => {
@@ -37,21 +38,25 @@ const Wine = () => {
             <div className="list">
                 {wines && wines.length > 0 && wines.map((wine, index) => (
                     <div className="list-item" key={index}>
-                        <div className="thumbnail">
-                            <img src={wine.image} alt={wine.wine} />
-                        </div>
-                        <div className="description">
-                            <h3>{wine.wine}</h3>
-                            <div className="meta">
-                                <span>Location: </span> {wine.location}
+                        <Link to={`/wine/${wine.id}`}>
+                            <div className="thumbnail">
+                                <img src={wine.image} alt={wine.wine} />
                             </div>
-                            <div className="meta">
-                                <span>Rating average: </span> {wine.rating?.average}
+                            <div className="description">
+                                <h3>
+                                    {wine.wine}
+                                </h3>
+                                <div className="meta">
+                                    <span>Location: </span> {wine.location}
+                                </div>
+                                <div className="meta">
+                                    <span>Rating average: </span> {wine.rating?.average}
+                                </div>
+                                <div className="meta">
+                                    <span>Rating Reviews: </span> {wine.rating?.reviews}
+                                </div>
                             </div>
-                            <div className="meta">
-                                <span>Rating Reviews: </span> {wine.rating?.reviews}
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 ))}
             </div>
